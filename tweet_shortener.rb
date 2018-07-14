@@ -60,3 +60,4 @@ def shortened_tweet_truncator (tweet)
    return tweet
   end
 end
+end
