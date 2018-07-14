@@ -32,7 +32,7 @@ def bulk_tweet_shortener (array)
   array.each_with_index do |tweet, index|
     tweet_array = tweet.split(" ")
     tweet_array.each_with_index do |word, index|
-    dictionary.keys.each do |x|
+    dictionary.each do |long_word, short_word|
       if x == word.downcase
         tweet_array[index] = dictionary[x]
       end
@@ -44,11 +44,11 @@ end
 
 
 def selective_tweet_shortener (tweet)
-if tweet.length > 140
-  word_substituter(tweet)
-else 
- tweet
-end
+  if tweet.length > 140
+    return word_substituter(tweet)
+  else 
+    return tweet
+  end
 end
 
 
