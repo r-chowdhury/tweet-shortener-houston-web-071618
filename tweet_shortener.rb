@@ -18,7 +18,7 @@ end
 def word_substituter (string)
   array = string.split(" ")
   array.each_with_index do |words,index|
-    dictionary each do |long_word, short_word|
+    dictionary.each do |long_word, short_word|
       if x == long_word 
         array[index] = dictionary[x]
       end
@@ -33,7 +33,7 @@ def bulk_tweet_shortener (array)
     tweet_array = tweet.split(" ")
     tweet_array.each_with_index do |word, index|
     dictionary.each do |long_word, short_word|
-      if x == word.downcase
+      if long_word == word.downcase
         tweet_array[index] = dictionary[x]
       end
     end 
