@@ -19,8 +19,8 @@ def word_substituter (string)
   array = string.split(" ")
   array.each_with_index do |words,index|
     dictionary.each do |long_word, short_word|
-      if x == long_word 
-        array[index] = dictionary[x]
+      if words == long_word 
+        array[index] = dictionary[long_word]
       end
     end
   end
