@@ -12,7 +12,7 @@ hash = {
     'you' => 'u',
     "at" => "@",
     "and" => "&"
-
+}
 end
 
 def word_substituter (string)
@@ -59,4 +59,4 @@ def shortened_tweet_truncator (tweet)
   else
    return tweet
   end
-end 
+end
